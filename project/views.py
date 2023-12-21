@@ -31,13 +31,11 @@ class PostProjectView(APIView):
 
 # View information about Project #
 class ProjectView(generics.ListAPIView):
-
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
         
 # View each Project #
-class EachProjectView(generics.RetrieveUpdateDestroyAPIView):
-    
+class EachProjectView(generics.RetrieveUpdateDestroyAPIView):  
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
         
